@@ -27,8 +27,7 @@ def accueil():
 
 @app.get("/presentation")
 def presentation():
-    return render_template("presentation.html", prenom="Rianala", nom="Arosoa")
-    return render_template("presentation.html", prenom="Léa", nom="Martin",
+    return render_template("presentation.html", prenom="Rianala", nom="Arosoa",
                        loisirs=["Jeux vidéo", "Musique", "Escalade"])
 # ---------------------------------------------------------------
 #  Ne pas modifier : utile seulement pour lancer le site
