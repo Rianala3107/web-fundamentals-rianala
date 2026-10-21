@@ -28,10 +28,8 @@ def accueil():
 @app.get("/presentation")
 def presentation():
     return render_template("presentation.html", prenom="Rianala", nom="Arosoa")
-
-@app.get("/loisirs")
-def loisirs():
-    return "J'aime jouer au piano"
+    return render_template("presentation.html", prenom="Léa", nom="Martin",
+                       loisirs=["Jeux vidéo", "Musique", "Escalade"])
 # ---------------------------------------------------------------
 #  Ne pas modifier : utile seulement pour lancer le site
 #  sur votre propre ordinateur (python flask_app.py)
