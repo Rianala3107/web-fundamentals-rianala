@@ -57,7 +57,11 @@ def salut():
         prenom = request.args.get("prenom", "inconnu")
         ville = request.args.get("ville", "nulle part")
         couleur = request.args.get("couleur", "black")
-    return f'style="color: {couleur};">Salut {prenom}, tu viens de {ville} c\'est ça ? (reçu en {request.method})
+    return f'''
+        <p style="color: {couleur};">Salut {prenom}, tu viens de {ville} c'est ça ? (reçu en {request.method})</p>
+        <br>
+        <a href="/"><button type="button">Retour</button></a>
+    '''
 
 # 3xx : une redirection
 @app.get("/home")
