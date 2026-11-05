@@ -27,7 +27,7 @@ def accueil():
 @app.get("/presentation")
 def presentation():
     return render_template("presentation.html", prenom="Rianala", nom="Arosoa",
-                       loisirs=["Jeux vidéo", "Musique", "Escalade"])
+                       loisirs=["K-drama", "Musique", "Tennis"])
 # ---------------------------------------------------------------
 #  Ne pas modifier : utile seulement pour lancer le site
 #  sur votre propre ordinateur (python flask_app.py)
