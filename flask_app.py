@@ -29,7 +29,7 @@ def presentation():
     return render_template("presentation.html", prenom="Rianala", nom="Arosoa",
                        loisirs=["K-drama", "Musique", "Tennis"])
     
-@app.get("/bonjour/<Rianala>")
+@app.get("/bonjour/<prenom>")
 def bonjour(prenom):
     return f"<h1>Bonjour {prenom} !</h1>"
 
