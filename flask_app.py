@@ -8,7 +8,7 @@
 #  Les consignes sont dans le dossier "exercices/".
 # ---------------------------------------------------------------
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -28,6 +28,16 @@ def accueil():
 def presentation():
     return render_template("presentation.html", prenom="Rianala", nom="Arosoa",
                        loisirs=["K-drama", "Musique", "Tennis"])
+    
+@app.get("/bonjour/<Léa>")
+def bonjour(prenom):
+    return f"<h1>Bonjour {prenom} !</h1>"
+
+@app.get("/calcul")
+def calcul():
+    a = int(request.args.get("a", 0))
+    b = int(request.args.get("b", 0))
+    return f"{a} + {b} = {a + b}"
 # ---------------------------------------------------------------
 #  Ne pas modifier : utile seulement pour lancer le site
 #  sur votre propre ordinateur (python flask_app.py)
