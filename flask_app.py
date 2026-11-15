@@ -59,6 +59,7 @@ def salut():
         couleur = request.args.get("couleur", "black")
     return f'''
         <p style="color: {couleur};">Hi {prenom}!, you come from {ville} right ? (received in {request.method})</p>
+        background-color: #000141;
         <br>
         <a href="/"><button type="button">Retour</button></a>
     '''
