@@ -58,7 +58,7 @@ def salut():
         ville = request.args.get("ville", "nulle part")
         couleur = request.args.get("couleur", "black")
     return f'''
-        <p style="color: {couleur};">Salut {prenom}, tu viens de {ville} c'est ça ? (reçu en {request.method})</p>
+        <p style="color: {couleur};">Hi {prenom}!, you come from {ville} right ? (received in {request.method})</p>
         <br>
         <a href="/"><button type="button">Retour</button></a>
     '''
